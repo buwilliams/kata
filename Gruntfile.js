@@ -22,12 +22,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    jasmine: {
-        src: 'src/features/**/*.js',
-        options: {
-            specs: 'test/**/*.js',
-        }
-    },
     jshint: {
       files: [
           'Gruntfile.js',
@@ -52,7 +46,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'jasmine'],
+      tasks: ['jshint'],
       karma: {
           files: ['src/features/**/*.js', 'test/**/*.js'],
           tasks: ['karma:unit:run']
